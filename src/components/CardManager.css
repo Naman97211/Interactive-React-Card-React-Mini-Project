@@ -1,0 +1,235 @@
+/* EditableLikeableCards.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #e0e7ff, #ede9fe);
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.header p {
+  margin-top: 8px;
+  color: #4b5563;
+}
+
+.new-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.new-card h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.input:focus, .textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.3);
+}
+
+.button {
+  background-color: #4f46e5;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.button:hover {
+  background-color: #4338ca;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  padding: 20px;
+  background: linear-gradient(to right, #6366f1, #a78bfa);
+  position: relative;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-header button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.like-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.like-row span {
+  font-weight: 500;
+}
+
+.heart {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.heart.liked {
+  color: red;
+}
+
+.heart.not-liked {
+  color: #9ca3af;
+}
+
+.card-content p {
+  color: #4b5563;
+  text-align: center;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.placeholder {
+  width: 60px;
+  height: 60px;
+  border: 2px dashed #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.edit-button, .cancel-button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+}
+
+.edit-button {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #4338ca;
+}
+
+.cancel-button {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.cancel-button:hover {
+  background-color: #e5e7eb;
+}
+
+.delete-button {
+  background-color: #dc2626;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #b91c1c;
+}
+
+.no-cards {
+  text-align: center;
+  padding: 50px 0;
+  color: #6b7280;
+  font-size: 1.125rem;
+}
+
+.reset-button {
+  background-color: #f3f4f6;
+  border: none;
+  color: #374151;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #e5e7eb;
+}
+
